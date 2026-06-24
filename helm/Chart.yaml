@@ -1,0 +1,6 @@
+apiVersion: v2
+name: tp-cicd
+description: A simple CI/CD demo app
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
