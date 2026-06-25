@@ -21,7 +21,7 @@ type rootResponse struct {
 func rootHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	resp := rootResponse{
-		Message: "Hello from CI/CD TP",
+		Message: "Hello from CI/CD TP - v2",
 		Version: version,
 	}
 	if err := json.NewEncoder(w).Encode(resp); err != nil {
