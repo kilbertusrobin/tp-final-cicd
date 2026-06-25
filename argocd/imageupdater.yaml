@@ -9,6 +9,7 @@ spec:
     allowTags: "regexp:^[0-9]+\\.[0-9]+\\.[0-9]+$"
     ignoreTags:
       - latest
+    pullSecret: "secret:argocd/ghcr-secret"
   writeBackConfig:
     method: "git:secret:argocd/git-creds"
     gitConfig:

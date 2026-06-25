@@ -118,3 +118,12 @@ jobs:
             ghcr.io/${{ github.repository_owner }}/tp-cicd:latest
           build-args: |
             VERSION=${{ steps.tag.outputs.new_version }}
+
+      - name: Update image tag in values.yaml
+        run: |
+          sed -i 's/tag: ".*"/tag: "${{ steps.tag.outputs.new_version }}"/' helm/values.yaml
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add helm/values.yaml
+          git commit -m "chore: bump image tag to ${{ steps.tag.outputs.new_version }} [skip ci]"
+          git push
