@@ -14,7 +14,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/kilbertusrobin/tp-cicd
+    repoURL: https://github.com/kilbertusrobin/tp-final-cicd
     targetRevision: main
     path: helm
   destination:
